@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <script src="../common/vue.js"></script>
+</head>
+<body>
+    <div class="app">{{msg}}
+        <div class="app">{{msg}}</div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'.app',
+            data:{
+                msg:'Hello Vue.js'
+            }
+        });
+        vm.$data = {
+            msg:'msg'
+        };
+        console.log(vm);
+        setTimeout(function(){
+            vm.msg = 'Hello World'
+        },5000);
+    </script>
+</body>
+</html>
