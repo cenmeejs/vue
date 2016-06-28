@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <script src="../common/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in items">{{item.text}}</li>
+        </ul>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data: {
+                items: [
+                    {text: 'learn javascript'},
+                    {text: 'learn Vue.js'},
+                    {text: 'learn VueComponent'}
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

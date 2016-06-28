@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <script src="../common/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="name">
+        <ul>
+            <li v-for="user in users |filterBy name in 'name'">{{user.name}}</li>
+        </ul>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                name:'',
+                users:[
+                    {name:'Even you'},
+                    {name:'js zhou'},
+                    {name:'tian ni'},
+                    {name:'hub git'}
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
