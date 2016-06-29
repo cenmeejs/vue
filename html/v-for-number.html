@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue</title>
+    <script src="../common/vue.js"></script>
+</head>
+<body>
+    <ul id="app">
+        <li v-for="n of num">{{n}}</li>
+    </ul>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                num:10
+            }
+        });
+    </script>
+</body>
+</html>
